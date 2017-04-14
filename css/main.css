@@ -43,6 +43,41 @@ textarea:focus {
   outline: none;
 }
 
+select::-ms-expand { display: none; } /*ie fix*/
+
+.select {
+    position: relative;
+    /*end of firefox fix*/
+}
+
+select {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 25px;
+
+  /*firefox fix*/
+  text-indent: 0.01px;
+  text-overflow: '';
+  /*end of firefox fix*/
+}
+
+.select::after {
+  content: "▼";
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
 :focus::-webkit-input-placeholder {color: transparent;}
 :focus::-moz-placeholder          {color: transparent;}
 :focus:-moz-placeholder           {color: transparent;}
@@ -661,17 +696,22 @@ textarea:focus {
 }
 
 .earn__tab-caption {
-  -webkit-flex-basis: 33.3%;
+  -webkit-flex-basis: 33.33%;
   -ms-flex-preferred-size: 33.3%;
   flex-basis: 33.3%;
   height: 99%;
-  border-left: 1px solid #e52423;
+  /*border-left: 1px solid #e52423;*/
   font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   color: #e52423;
   cursor: pointer;
+}
+
+.earn__tab-caption:nth-child(2){
+  border-left: 1px solid #e52423;
+  border-right: 1px solid #e52423;
 }
 
 @media only screen and (max-width: 768px) {
@@ -777,7 +817,8 @@ textarea:focus {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  background: #f9593a url("../img/card-page/for-clients/bomb.png") no-repeat 0 0;
+  /*background: #f9593a url("../img/card-page/for-clients/bomb.png") no-repeat 0 0;*/
+    background-color: #f9593a;
   -moz-background-size: 229px 408px;
   -o-background-size: 229px 408px;
   background-size: 229px 408px;
@@ -790,7 +831,7 @@ textarea:focus {
   }
 }
 
-.for-clients__plus-item:nth-child(3) {margin-top: 98px;}
+/*.for-clients__plus-item:nth-child(3) {margin-top: 98px;}*/
 
 @media only screen and (max-width: 768px) {
   .for-clients__plus-item:nth-child(3) {margin-top: 50px;}
@@ -922,6 +963,7 @@ textarea:focus {
 .access__btn {
   margin-top: 60px;
   border: 1px solid rgba(0, 0, 0, 0.09);
+  background-color: #fff;
   color: #333;
   -webkit-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
@@ -1114,6 +1156,7 @@ textarea:focus {
   padding-top: 60px;
   padding-bottom: 20px;
   padding-left: 85px;
+  padding-right: 85px;
   border-bottom: 1px solid rgba(204, 204, 204, 0.25);
 }
 
@@ -1195,7 +1238,8 @@ textarea:focus {
 
 .bid__form-input {
   display: block;
-  width: 550px;
+  /*width: 550px;*/
+  width: 100%;
   height: 67px;
   margin-top: 10px;
   padding-left: 30px;
