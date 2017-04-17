@@ -24,6 +24,7 @@ a {
   -o-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
   transition: all .3s ease-in;
+  color: #1495ba;
 }
 
 ul, li {
@@ -784,9 +785,13 @@ select {
 
 .earn__text {
   font-size: 1.8rem;
-  line-height: 3.8rem;
+  line-height: 2.8rem;
   font-weight: 300;
   color: #333;
+}
+
+.earn__text li {
+  margin-bottom: 10px;
 }
 
 .earn__text-bold {
@@ -863,7 +868,7 @@ select {
 }
 
 @media only screen and (max-width: 768px) {
-  .for-clients__plus-item {
+  .for-clients__plus .for-clients__plus-item {
     width: 100%;
     margin-top: 50px;
   }
@@ -989,7 +994,7 @@ select {
 /*===================== ACCESS SECTION ========================*/
 .access {
   width: 100%;
-  height: 556px;
+  min-height: 556px;
   position: relative;
   overflow: hidden;
   /*background: url("../img/card-page/access/access_bg.png") no-repeat center top;*/
@@ -1020,7 +1025,7 @@ select {
 }
 
 .access_img-notebook {
-  right: -300px;
+  right: -335px;
 }
 
 .access__headline-middle {
@@ -1292,6 +1297,7 @@ select {
 .bid__form-caption_bold {font-weight: 500;}
 
 .bid__form-text {
+  text-align: left;
   color: #666;
   font-size: 2rem;
   font-weight: 300;
@@ -1461,7 +1467,7 @@ label.radio  {
   padding-left: 28px;
 }
 
-input[type=radio] {display: block;}
+input[type=radio] {display: none;}
 
 label.radio:before {
   content: "";
@@ -2093,7 +2099,7 @@ input[type=radio]:checked + label:before {
 .owl-dots {
   text-align: center;
   position: relative;
-  top: -30px;
+  top: -9px;
 }
 
 .owl-dots .owl-dot {
@@ -2189,4 +2195,186 @@ input[type=radio]:checked + label:before {
 
 .hidden {
   display: none;
+}
+
+img.ajaxloading {
+    position: absolute;
+    margin-left: 510px;
+    margin-top: -35px;
+}
+
+.bid__input-wrapper {
+  text-align: justify;
+}
+
+.bid__input-wrapper[data-group-item=kladr-house]::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.textbox.houseCode {
+    display: inline-block;
+    width: 24.5%;
+}
+
+@media screen and (max-width: 1366px) {
+  .banner__slider {
+    padding-top: 20px;
+  }
+  .owl-nav {
+    display: none;
+  }
+  .banner__title {
+    font-size: 32px;
+  }
+
+  .banner__list,
+  .banner__text b,
+  .banner__text {
+    font-size: 22px;
+  }
+
+  .access_img-notebook {
+    width: 62%;
+  }
+}
+
+@media screen and (max-width: 1236px) {
+  .banner__slider {
+    padding-top: 20px;
+  }
+  .banner__container {
+    width: 100%;
+  }
+
+  .access_img-notebook {
+    right: -385px;
+  }
+
+  .access_img-phone {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .banner__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .banner__list,
+  .banner__text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .banner__container {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .access_img-notebook {
+    width: 660px;
+    right: -450px;
+  }
+
+  .access_img-phone {
+    width: 268px;
+    left: -80px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .access__container {
+    background-color: rgba(255, 255, 255, 0.93);
+    padding: 15px;
+  }
+  .access__btn {
+    width: 46%;
+  }
+
+  .access {
+    min-height: auto;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .banner__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .banner__list,
+  .banner__text b,
+  .banner__text {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .banner__slide {
+    padding-bottom: 40px;
+    overflow: hidden;
+    height: 320px;
+  }
+
+  .banner__slide img {
+    position: absolute;
+    width: auto !important;
+    left: -59%;
+    height: 100%;
+    max-width: none;
+  }
+
+  .textbox.houseCode {
+    display: inline-block;
+    width: 23.5%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .banner__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .banner__list,
+  .banner__text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .banner__slide img {
+    left: -100%;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .banner__slide img {
+    left: -185%;
+  }
+
+  .banner__info {
+    background-color: #fff;
+    background: rgba(255, 255, 255, 0.84);
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner__container {
+    top: auto;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .access__btn {
+    width: 100%;
+  }
 }

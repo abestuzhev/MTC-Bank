@@ -8,7 +8,7 @@ $(document).ready(function() {
   //   }, 400);
   //   return false;
   // });
-  
+
 
   $(".top-header__nav-link").click(function() {
   	$(".top-header__nav-link").removeClass("top-header__nav-link_active");
@@ -30,6 +30,17 @@ $(document).ready(function() {
         smartSpeed: 500,
         nav: true,
         dots: true,
+        responsive:{ //Адаптация в зависимости от разрешения экрана
+    			0:{
+    				items:1
+    			},
+    			600:{
+    				items:1
+    			},
+    			1000:{
+    				items:1
+    			}
+    		},
         navText: ['<div class="arrow arrow_left"><img src="img/arr_left.png"></div>', '<div class="arrow arrow_right"><img src="img/arr_right.png"></div>']
     });
 
