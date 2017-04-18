@@ -301,7 +301,7 @@
 
 <section class="cash-back">
     <div class="cash-back__container">
-        <div class="cash-back__col">
+        <div class="cash-back__header">
             <div class="headline cash-back__headline">
                 Рассчитайте <br>
                 ваш Cash Back
@@ -310,11 +310,9 @@
                 Используйте ваши привычные расходы для того,
                 чтобы понять как много вы можете заработать.
             </p>
-            <div class="cash-back__price">10 205 <span class="cash-back__price cash-back__price_sm">руб.</span>
-            </div>
-            <div class="btn btn_red cash-back__btn">Оформить карту</div>
         </div>
-        <div class="cash-back__col">
+
+        <div class="cash-back__data">
             <div class="filter cash-back__filter">
                 <label class="cash-back__label">Все расходы по карте в месяц<br>
                     <input type="text" id="total" class="calculate__input" value="45 000 руб. "/>
@@ -341,7 +339,12 @@
                     <div class="slider2"></div>
                 </div>
             </div><!-- calculate__filter -->
+        </div>
 
+        <div class="cash-back__sum">
+            <div class="cash-back__price">10 205 <span class="cash-back__price cash-back__price_sm">руб.</span>
+            </div>
+            <div class="btn btn_red cash-back__btn">Оформить карту</div>
 
         </div>
     </div>
@@ -375,210 +378,123 @@
                     решение по заявке / черновик </label>
             </div>
         </div>
-        <!-- <div class="bid__form-chapter short">
-            <div class="bid__form-title">Информация о продукте</div>
 
+        <div class="bid__form-chapter short">
+        <div class="bid__form-title">1. Информация о продукте</div>
 
-            <div class="bid__input-wrapper txtPRODUCT_SUMM">
-                <label class="bid__form-caption">
-                    Сумма кредита <input id="form_text_2359" name="form_text_2359"
-                                         class="bid__form-input"
-                                         placeholder="Введите желаемую сумма кредита" type="text"
-                                         value=""/>
-                </label>
-                <div class="bid__form-hint">от 20 000 до 3 000 000 руб.</div>
-                <div class="error" id="form_text_2359_error"></div>
-            </div>
+        <div class="bid__product">
+            <div class="bid__product-photo"><img src="img/card-page/banner/banner_card.png" alt=""></div>
+            <p class="bid__product-text">
+                <span class="bid__product-text bid__product-text_bold">Кредитная карта для зарплатных клиентов</span> <br>
+                · Mastercard Platinum c Cash-Back <br>
+                · Ставка от 23,99% <br>
+                · Grace-период до 51 дня
+            </p>
+        </div>
 
-            <div class="bid__input-wrapper txtPRODUCT_SROK">
-                <label class="bid__form-caption">
-                    Срок кредита <input id="form_text_2360" name="form_text_2360"
-                                        class="bid__form-input" placeholder="12" type="text"
-                                        value=""/>
-                </label>
-                <div class="bid__form-hint">от 12 до 60 мес.</div>
-                <div class="error" id="form_text_2360_error"></div>
-            </div>
-        </div> -->
-
-        <div class="bid__form-chapter">
-  				<div class="bid__form-title">1. Информация о продукте</div>
-
-  				<div class="bid__product">
-  					<div class="bid__product-photo"><img src="img/card-page/banner/banner_card.png" alt=""></div>
-  					<p class="bid__product-text">
-  						<span class="bid__product-text bid__product-text_bold">Кредитная карта для зарплатных клиентов</span> <br>
-  						· Mastercard Platinum c Cash-Back <br>
-  						· Ставка от 23,99% <br>
-  						· Grace-период до 51 дня
-  					</p>
-  				</div>
-
-          <div class="bid__form-caption">
+          <div class="bid__form-caption short">
             <div class="bid__form-caption_title">Способ выпуска</div>
-            <select name="" id="plastCat" class="bid__form-input" name="plastCat">
-  						<option value="">Выберите cпособ выпуска</option>
-  						<option value="12">Именная карта, срок выпуска до 10 дней</option>
-  						<option value="11">Неименная карта моментального выпуска</option>
-  					</select>
+			<div class="select_layout">
+				<select name="" id="plastCat" class="bid__form-input" name="plastCat">
+					<option value="">Выберите cпособ выпуска</option>
+					<option value="12">Именная карта, срок выпуска до 10 дней</option>
+					<option value="11">Неименная карта моментального выпуска</option>
+				</select>
+			</div>
+            <div class="error form_text_2270_error" id="" style="display: none;"></div>
           </div>
 
 
-          <!--
-  				<ul>
-  					<li style="display: list-item;">
-  						<div class="legend">Срок изготовления</div>
-  						<input type="hidden" name="form_text_2274" value="CARD.PERSONAL">
-  						<select id="plastCat" name="plastCat">
-  							<option value="">Выберите cпособ выпуска</option>
-  							<option value="12">именная карта, срок выпуска до 10 дней</option>
-  							<option value="11">неименная карта моментального выпуска</option>
-  						</select>
-  					</li>
-
-  					<li class="credit-limit-wrap" style="display: none;">
-  						<strong class="legend">Желаемый кредитный лимит</strong>
-  						<span class="hintHolder">
-  							<input name="form_text_2270" class="textbox" type="text" value="0" data-required="false"> <span class="label-currency">руб.</span>
-  							<small class="hint">
-  								от <span class="label-currency-min">20 000</span> до <span class="label-currency-max">400 000</span>
-  								<span class="label-currency">руб.</span>
-  							</small>
-  						</span>
-  					</li>
-
-  					<li class="shoose-office-wrap" style="display: none;">
-  						<strong class="legend">Офис получения карты</strong>
-  						<div class="fieldSearchResultWrapper">
-  							<select name="form_text_637" class="region-select" data-required="true" error="0">
-  								<option value="0" selected="">Выберите регион</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Амурская область">Амурская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Волгоградская область">Волгоградская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Вологодская область">Вологодская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Воронежская область">Воронежская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Еврейская автономная область">Еврейская автономная область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Забайкальский край">Забайкальский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Иркутская область">Иркутская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Калининградская область">Калининградская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Кемеровская область">Кемеровская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Кировская область">Кировская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Краснодарский край">Краснодарский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Красноярский край">Красноярский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Москва">Москва</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Нижегородская область">Нижегородская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Новосибирская область">Новосибирская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Омская область">Омская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Оренбургская область">Оренбургская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Пензенская область">Пензенская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Пермский край">Пермский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Приморский край">Приморский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Башкортостан">Республика Башкортостан</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Карелия">Республика Карелия</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Коми">Республика Коми</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Татарстан">Республика Татарстан</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ростовская область">Ростовская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Рязанская область">Рязанская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Самарская область">Самарская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Санкт-Петербург">Санкт-Петербург</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Саратовская область">Саратовская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Сахалинская область">Сахалинская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Свердловская область">Свердловская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ставропольский край">Ставропольский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Томская область">Томская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Тюменская область">Тюменская область</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Хабаровский край">Хабаровский край</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ханты-Мансийский автономный округ - Югра">Ханты-Мансийский автономный округ - Югра</option>
-  								<option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Челябинская область">Челябинская область</option>
-  							</select>		<img class="waiter ajaxloading" alt="" src="/img/waiter.gif">
-  						</div>
-  					</li>
-
-  					<li id="citySelector" style="display: none;">
-  						<strong class="legend">Город</strong>
-  						<div class="fieldSearchResultWrapper">
-  							<select name="form_text_638" class="city-select" data-required="true" error="0">
-  								<option value="0" selected="">Выберите город</option>
-
-  							</select>		<img class="waiter ajaxloading" alt="" src="/img/waiter.gif">
-  						</div>
-  					</li>
-
-  					<li class="shoose-office" id="officeSelector" style="display: none;">
-  						<strong class="legend">Офис</strong>
-  						<div class="fieldSearchResultWrapper">
-  							<select name="form_text_639" class="office-select" data-required="true">
-  								<option value="0" selected="">Выберите офис</option>
-  							</select>
-  							<img class="waiter ajaxloading" alt="" src="/img/waiter.gif">
-  						</div>
-  					</li>
-  				</ul>
-  				end-->
-
-          <div class="bid__form-caption js-cardCategory" style="display: none;">
+          <div class="bid__form-caption js-cardCategory short" style="display: none;">
             <div class="bid__form-caption_title">Категория карты</div>
-            <div class="select">
-  						<select name="" id="cardCategory" name="cardCategory" class="bid__form-input">
-  							<option value="">Выберите категорию карты</option>d
-  							<option value="14">Mastercard Platinum</option>d
-  							<option value="18">Visa Platinum</option>
-  						</select>
-  					</div>
+            <div class="select_layout">
+				<select name="" id="cardCategory" name="cardCategory" class="bid__form-input">
+					<option value="">Выберите категорию карты</option>d
+					<option value="14">Mastercard Platinum</option>d
+					<option value="18">Visa Platinum</option>
+				</select>
+			</div>
           </div>
 
-          <!-- <label class="bid__form-caption js-cardCategory" style="display: none;">Категория карты
-  					<div class="select">
-  						<select name="" id="cardCategory" name="cardCategory" class="bid__form-input">
-  							<option value="">Выберите категорию карты</option>d
-  							<option value="14">Mastercard Platinum</option>d
-  							<option value="18">Visa Platinum</option>
-  						</select>
-  					</div>
-  				</label> -->
-
-          <div class="bid__form-caption js-form_text_2270" style="display: none;">
-            <span>Ваша карта: Visa Classic</span>
+          <div class="bid__form-caption js-form_text_2270 short" style="display: none;">
+            <span class="js-form_text_2270-card" style="display: none;">Ваша карта: Visa Classic</span>
             <div class="bid__form-caption_title">Желаемый кредитный лимит</div>
-            <input name="form_text_2270" type="number" class="bid__form-input" placeholder="400 000"> <span class="bid__form-hint">от 20 000 до 400 000 руб.</span>
+            <input name="form_text_2270" type="number" class="bid__form-input" placeholder="400 000" maxlength="7"> <span class="bid__form-hint">от 20 000 до 400 000 руб.</span>
+            <div class="error form_text_2270_error" id="" style="display: none;"></div>
           </div>
 
-          <div class="bid__form-caption js-form_text_2270-1" style="display: none;">
-            <div class="bid__form-caption_title">Желаемый кредитный лимит</div>
-            <input name="form_text_2270-1" type="number" class="bid__form-input" placeholder="400 000"> <span class="bid__form-hint">от 20 000 до 400 000 руб.</span>
-          </div>
-
-          <div class="bid__form-caption js-form_text_637" style="display: none;">
+          <div class="bid__form-caption js-form_text_637 short" style="display: none;">
             <div class="bid__form-caption_title">Офис получения карты</div>
-            <select name="form_text_637" id="form_text_637" class="bid__form-input">
-  						<option value="0">Выберите регион</option>
-  						<option value="">Московская область</option>
-  						<option value="">Московская область</option>
-  						<option value="">Московская область</option>
-  					</select>
+            <div class="select_layout">
+                <select name="form_text_637" id="form_text_637" class="bid__form-input">
+                    <option value="0" selected="">Выберите регион</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Амурская область">Амурская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Волгоградская область">Волгоградская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Вологодская область">Вологодская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Воронежская область">Воронежская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Еврейская автономная область">Еврейская автономная область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Забайкальский край">Забайкальский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Иркутская область">Иркутская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Калининградская область">Калининградская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Кемеровская область">Кемеровская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Кировская область">Кировская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Краснодарский край">Краснодарский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Красноярский край">Красноярский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Москва">Москва</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Нижегородская область">Нижегородская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Новосибирская область">Новосибирская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Омская область">Омская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Оренбургская область">Оренбургская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Пензенская область">Пензенская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Пермский край">Пермский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Приморский край">Приморский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Башкортостан">Республика Башкортостан</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Карелия">Республика Карелия</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Коми">Республика Коми</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Республика Татарстан">Республика Татарстан</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ростовская область">Ростовская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Рязанская область">Рязанская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Самарская область">Самарская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Саратовская область">Саратовская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Сахалинская область">Сахалинская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Свердловская область">Свердловская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ставропольский край">Ставропольский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Томская область">Томская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Тюменская область">Тюменская область</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Хабаровский край">Хабаровский край</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Ханты-Мансийский автономный округ - Югра">Ханты-Мансийский автономный округ - Югра</option>
+                    <option data-longitude="" data-latitude="" data-office_id="" data-c_code="" value="Челябинская область">Челябинская область</option>
+                </select>
+            </div>
           </div>
 
-          <div class="bid__form-caption js-form_text_638" style="display: none;">
+          <div class="bid__form-caption js-form_text_638 short" style="display: none;">
             <div class="bid__form-caption_title">Город</div>
-            <select name="form_text_638" id="form_text_638" class="bid__form-input">
-              <option value="0">Выберите город</option>
-              <option value="">Москва</option>
-              <option value="">Санк-Петербург</option>
-              <option value="">Архангельск</option>
-            </select>
+            <div class="select_layout">
+                <select name="form_text_638" id="form_text_638" class="bid__form-input">
+                    <option value="0">Выберите город</option>
+                    <option value="">Москва</option>
+                    <option value="">Санк-Петербург</option>
+                    <option value="">Архангельск</option>
+                </select>
+            </div>
           </div>
 
-          <div class="bid__form-caption js-form_text_639" style="display: none;">
+          <div class="bid__form-caption js-form_text_639 short" style="display: none;">
             <div class="bid__form-caption_title">Офис</div>
-            <select name="form_text_639" id="form_text_639" class="bid__form-input">
-  						<option value="">Выберите офис</option>
-  						<option value="">м. Октябрьское поле, Маршала Бирюзова, 20 к.1,Д</option>
-  						<option value="">м. Октябрьское поле, Маршала Бирюзова, 20 к.1,Д</option>
-  					</select>
+            <div class="select_layout">
+                <select name="form_text_639" id="form_text_639" class="bid__form-input">
+                    <option value="">Выберите офис</option>
+                    <option value="">м. Октябрьское поле, Маршала Бирюзова, 20 к.1,Д</option>
+                    <option value="">м. Октябрьское поле, Маршала Бирюзова, 20 к.1,Д</option>
+                </select>
+            </div>
           </div>
 
 
-  			</div><!-- bid__form-chapter -->
+  		</div><!-- bid__form-chapter -->
 
         <div class="bid__form-chapter short">
             <div class="bid__form-title">Ваши персональные данные</div>
@@ -589,7 +505,7 @@
                     <input id="form_text_2361" name="form_text_2361" class="bid__form-input"
                            placeholder="Фамилия" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
+                <!--<div class="bid__form-hint"></div>-->
                 <div class="error" id="form_text_2361_error"></div>
             </div>
 
@@ -598,7 +514,7 @@
                     <input id="form_text_2362" name="form_text_2362" class="bid__form-input"
                            placeholder="Имя" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
+                <!--<div class="bid__form-hint"></div>-->
                 <div class="error" id="form_text_2362_error"></div>
             </div>
 
@@ -607,7 +523,7 @@
                     <input id="form_text_2363" name="form_text_2363" class="bid__form-input"
                            placeholder="Отчество" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
+                <!--<div class="bid__form-hint"></div>-->
                 <div class="error" id="form_text_2363_error"></div>
             </div>
             <div class="bid__input-wrapper">
@@ -630,7 +546,6 @@
                     <input id="form_text_2556" name="form_text_2556" class="bid__form-input"
                            placeholder="Предыдущая фамилия" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
                 <div class="error" id="form_text_2556_error">Укажите предыдущую фамилию</div>
             </div>
 
@@ -639,7 +554,6 @@
                     <input id="form_text_2557" name="form_text_2557" class="bid__form-input"
                            placeholder="Предыдущее имя" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
                 <div class="error" id="form_text_2557_error">Укажите предыдущее имя</div>
             </div>
 
@@ -648,7 +562,6 @@
                     <input id="form_text_2558" name="form_text_2558" class="bid__form-input"
                            placeholder="Предыдущее отчество" type="text" value=""/>
                 </label>
-                <div class="bid__form-hint"></div>
                 <div class="error" id="form_text_2558_error"></div>
             </div>
             <div class="bid__input-wrapper">
@@ -789,7 +702,7 @@
 
                     <div class="fieldSearchResultWrapper">
                         <input type="text" class="textbox  bid__form-input" placeholder="Регион"
-                               name="form_text_2380" data-name="region" value="" data-type="1"
+                               id="form_text_2380" name="form_text_2380" data-name="region" value="" data-type="1"
                                autocomplete="off"/>
                         <img class="inputtextwaiter ajaxloading" alt="" src="img/waiter.gif"
                              style="display:none"/>
@@ -799,11 +712,11 @@
                     <input type="hidden" name="form_hidden_2382" data-name="region_name" value=""/>
                     <input type="hidden" name="form_hidden_2407" data-name="region_socr" value=""/>
                 </li>
-                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-city">
+                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-city" style="display: none">
 
-                    <div class="fieldSearchResultWrapper">
+                    <div class="fieldSearchResultWrapper ">
                         <input type="text" placeholder="Район или Город"
-                               class="textbox  bid__form-input" name="form_text_2408"
+                               class="textbox  bid__form-input" id="form_text_2408" name="form_text_2408"
                                data-name="city" value="" data-type="2" autocomplete="off"/>
                         <img class="inputtextwaiter ajaxloading" alt="" src="img/waiter.gif"
                              style="display:none"/>
@@ -816,11 +729,11 @@
                     <input type="hidden" name="form_hidden_2413" data-name="city_name" value=""/>
                     <input type="hidden" name="form_hidden_2414" data-name="city_socr" value=""/>
                 </li>
-                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-np">
+                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-np" style="display: none">
 
                     <div class="fieldSearchResultWrapper">
                         <input type="text" placeholder="Населенный пункт"
-                               class="textbox  bid__form-input" name="form_text_2415" data-name="np"
+                               class="textbox  bid__form-input" id="form_text_2415" name="form_text_2415" data-name="np"
                                value="" data-type="3" autocomplete="off"/>
                         <img class="inputtextwaiter ajaxloading" alt="" src="img/waiter.gif"
                              style="display:none"/>
@@ -830,11 +743,11 @@
                     <input type="hidden" name="form_hidden_2417" data-name="np_name" value=""/>
                     <input type="hidden" name="form_hidden_2418" data-name="np_socr" value=""/>
                 </li>
-                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-street">
+                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-street" style="display: none">
 
                     <div class="fieldSearchResultWrapper">
                         <input type="text" placeholder="Улица" class="textbox bid__form-input"
-                               name="form_text_2419" data-name="street" value="" data-type="4"
+                               id="form_text_2419" name="form_text_2419" data-name="street" value="" data-type="4"
                                autocomplete="off"/>
                         <img class="inputtextwaiter ajaxloading" alt="" src="img/waiter.gif"
                              style="display:none"/>
@@ -845,7 +758,7 @@
                     <input type="hidden" name="form_hidden_2422" data-name="street_socr" value=""/>
                     <input type="hidden" name="form_hidden_2423" data-name="street_okato" value=""/>
                 </li>
-                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-house">
+                <li class="bid__input-wrapper" data-group="kladr" data-group-item="kladr-house" style="display: none">
                     <input type="text" class="textbox houseCode bid__form-input"
                            name="form_text_2423" placeholder="дом" data-name="house" value=""
                            data-type="5"/>
@@ -885,18 +798,20 @@
                 </div>
             </div>
             <div class="bid__input-wrapper">
-                <select name="form_dropdown_PASPORT_POST_PLASE_STATUS"
-                        id="form_dropdown_PASPORT_POST_PLASE_STATUS"
-                        class="bid__form-input inputselect">
-                    <option value="">Статус места регистрации</option>
-                    <option value="2384">собственность</option>
-                    <option value="2385">социальный найм</option>
-                    <option value="2386">аренда</option>
-                    <option value="2434">у родственников</option>
-                    <option value="2435">служебное жильё</option>
-                    <option value="2436">общежитие/гостиница</option>
-                    <option value="2437">иное</option>
-                </select>
+                <div class="select_layout">
+                    <select name="form_dropdown_PASPORT_POST_PLASE_STATUS"
+                            id="form_dropdown_PASPORT_POST_PLASE_STATUS"
+                            class="bid__form-input inputselect">
+                        <option value="">Статус места регистрации</option>
+                        <option value="2384">собственность</option>
+                        <option value="2385">социальный найм</option>
+                        <option value="2386">аренда</option>
+                        <option value="2434">у родственников</option>
+                        <option value="2435">служебное жильё</option>
+                        <option value="2436">общежитие/гостиница</option>
+                        <option value="2437">иное</option>
+                    </select>
+                </div>
                 <div class="bid__form-hint"></div>
                 <div class="error">Укажите Статус места регистрации</div>
             </div>

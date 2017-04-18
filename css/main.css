@@ -46,9 +46,10 @@ textarea:focus {
 
 select::-ms-expand { display: none; } /*ie fix*/
 
-.select {
+
+/*кастомный селект*/
+.select_layout {
     position: relative;
-    /*end of firefox fix*/
 }
 
 select {
@@ -64,7 +65,7 @@ select {
   /*end of firefox fix*/
 }
 
-.select::after {
+.select_layout::after {
   content: "▼";
   color: #a1a1a1;
   padding: 0 8px;
@@ -1182,6 +1183,36 @@ select {
   margin-left: -3px;
 }
 
+/*new style*/
+
+.cash-back__container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cash-back__header,
+.cash-back__data,
+.cash-back__sum {
+    width: 50%;
+}
+
+.cash-back__header {
+    float: left;
+}
+
+.cash-back__data {
+    float: right;
+}
+
+.cash-back__sum {
+    float: left;
+}
+
+
+
+/**/
+
 .cash-back__headline {
   margin-bottom: 30px;
 }
@@ -1199,6 +1230,19 @@ select {
   font-size: 8.6rem;
   font-weight: 300;
   color: #e52423;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .cash-back__price {
+        margin-bottom: 13px;
+        line-height: 7.4rem;
+        font-size: 5.6rem;
+    }
+
+    .filter {
+        width: 280px;
+    }
 }
 
 .cash-back__price_sm {
@@ -1365,6 +1409,21 @@ select {
 
 @media only screen and (max-width: 670px) {
   .bid__form-input {width: 100%;}
+
+    .bid__form-input-phone_lg {
+        margin-left: 0;}
+
+    .cash-back__header,
+    .cash-back__data,
+    .cash-back__sum {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .cash-back__filter {
+        float: none;
+    }
 }
 
 .bid__form-input::-webkit-input-placeholder  {color: #666; font-size: 20px; font-weight: 300; -webkit-transition: color .2s ease-in; -o-transition: color .2s ease-in; -moz-transition: color .2s ease-in; transition: color .2s ease-in;}
@@ -1386,6 +1445,8 @@ select {
 }
 
 .bid__product {margin-bottom: 40px;}
+
+
 
 .bid__product-photo {
   display: inline-block;
@@ -1487,7 +1548,7 @@ input[type=radio]:checked + label:before {
   background-position: 0 -126px;
 }
 
-.bid__input-wrapper {margin-bottom: 40px;}
+.bid__input-wrapper {margin-bottom: 16px;}
 
 
 .message {
@@ -1978,6 +2039,13 @@ input[type=radio]:checked + label:before {
   color: #333;
   background-color: #fafafa;
 }
+@media only screen and (max-width: 480px) {
+
+    .calculate__input {
+        width: 270px;
+    }
+}
+
 
 .calculate__total {
   font-size: 2.9rem;
@@ -2380,4 +2448,21 @@ img.ajaxloading {
   .access__btn {
     width: 100%;
   }
+}
+
+
+.error {
+    display: none;
+    margin-top: 5px;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.is-show {
+    display: block !important;
+}
+
+.is-hide {
+    display: none !important;
 }

@@ -13,43 +13,65 @@ $(document).ready(function () {
 
     // именованная > категория карты
     $('#cardCategory').on('change', function(){
-      $creditLimit = $(this).parents(".bid__form-caption").siblings('.js-form_text_2270-1');
-      $cardRegion = $(this).parents(".bid__form-caption").siblings('.js-form_text_637');
-      $creditLimit.show();
-      $cardRegion.show();
+      $creditLimit = $(this).closest(".bid__form-caption").siblings('.js-form_text_2270');
+      $cardRegion = $(this).closest(".bid__form-caption").siblings('.js-form_text_637');
+      $creditLimit.addClass('is-show');
+      $cardRegion.addClass('is-show');
 		});
 
     // Регион получения карты
     $('#form_text_637').on('change', function(){
-      $cardCity = $(this).parents(".bid__form-caption").siblings('.js-form_text_638');
-      $cardCity.show();
+      $cardCity = $(this).closest('.select_layout').parents(".bid__form-caption").siblings('.js-form_text_638');
+      $cardCity.addClass('is-show');
 		});
 
     // Город получения карты
     $('#form_text_638').on('change', function(){
-      $cardOffice = $(this).parents(".bid__form-caption").siblings('.js-form_text_639');
-      $cardOffice.show();
+      $cardOffice = $(this).closest(".bid__form-caption").siblings('.js-form_text_639');
+      $cardOffice.addClass('is-show');
 		});
 
     // выбор пластиковой карты
         $('#plastCat').on('change', function(){
           var val = $(this).val(),
-      			 $namedMap = $(this).parents(".bid__form-caption").siblings(".js-cardCategory"),//12
-             $nonamedMap = $(this).parents(".bid__form-caption").siblings('.js-form_text_2270');//11
-             console.log(val);
+      		 $namedMap = $(this).closest(".bid__form-caption").siblings(".js-cardCategory"),//12
+             $nonamedMap = $(this).closest(".bid__form-caption").siblings('.js-form_text_2270'),//11
+             $textPremiumCard = $(this).closest(".bid__form-caption").siblings('.js-form_text_2270').find('.js-form_text_2270-card');
+
+
 
       		if (val == '12') {
-            $nonamedMap.hide();
-      			$namedMap.show();
-      		} else if (val == '11') {
-            $namedMap.hide();
-            $creditLimit.hide();
-            $cardRegion.hide();
-            $cardCity.hide();
-            $cardOffice.hide();
-      			$nonamedMap.show();
-      		}
-    		});
+            $nonamedMap.removeClass('is-show');
+            $textPremiumCard.removeClass('is-show');
+      		$namedMap.addClass('is-show');
+
+            } else if (val == '11') {
+
+                $nonamedMap.addClass('is-show');
+                $textPremiumCard.addClass('is-show');
+                $namedMap.removeClass('is-show');
+                $cardRegion.removeClass('is-show');
+                $cardCity.removeClass('is-show');
+                $cardOffice.removeClass('is-show');
+      		};
+        });
+    
+    //прописка > регион
+    $('#form_text_2380').on('change', function(){
+        $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
+
+    $('#form_text_2408').on('change', function(){
+        $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
+
+    $('#form_text_2415').on('change', function(){
+        $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
+
+    $('#form_text_2419').on('change', function(){
+        $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
     // end
 
     $(".txtPASPORT_OLD_NUMBER").hide();
@@ -820,6 +842,15 @@ function checkNames(resultat) {
         resultat = false;
     } else {
         $('#form_text_2362_error').hide();
+    }
+
+    //проверка лимита кредита у карты
+    var val = jQuery.trim($("input[name=form_text_2270]").val());
+    if (val.length <= 0 || val.length >= 7 || !validateName(val)) {
+        $('.form_text_2270_error').text("Укажите сумму кредита от 20 000 до 400 000 руб").show();
+        resultat = false;
+    } else {
+        $('.form_text_2270_error').hide();
     }
 
     // проверка кем выдан
