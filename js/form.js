@@ -3,6 +3,55 @@
 /* global BX */
 
 $(document).ready(function () {
+
+
+    var $creditLimit,
+        $cardRegion,
+        $cardCity,
+        $cardOffice;
+
+
+    // именованная > категория карты
+    $('#cardCategory').on('change', function(){
+      $creditLimit = $(this).parents(".bid__form-caption").siblings('.js-form_text_2270-1');
+      $cardRegion = $(this).parents(".bid__form-caption").siblings('.js-form_text_637');
+      $creditLimit.show();
+      $cardRegion.show();
+		});
+
+    // Регион получения карты
+    $('#form_text_637').on('change', function(){
+      $cardCity = $(this).parents(".bid__form-caption").siblings('.js-form_text_638');
+      $cardCity.show();
+		});
+
+    // Город получения карты
+    $('#form_text_638').on('change', function(){
+      $cardOffice = $(this).parents(".bid__form-caption").siblings('.js-form_text_639');
+      $cardOffice.show();
+		});
+
+    // выбор пластиковой карты
+        $('#plastCat').on('change', function(){
+          var val = $(this).val(),
+      			 $namedMap = $(this).parents(".bid__form-caption").siblings(".js-cardCategory"),//12
+             $nonamedMap = $(this).parents(".bid__form-caption").siblings('.js-form_text_2270');//11
+             console.log(val);
+
+      		if (val == '12') {
+            $nonamedMap.hide();
+      			$namedMap.show();
+      		} else if (val == '11') {
+            $namedMap.hide();
+            $creditLimit.hide();
+            $cardRegion.hide();
+            $cardCity.hide();
+            $cardOffice.hide();
+      			$nonamedMap.show();
+      		}
+    		});
+    // end
+
     $(".txtPASPORT_OLD_NUMBER").hide();
 
     $("#PASPORT_OLD-2375").click(function () {

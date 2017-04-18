@@ -66,11 +66,13 @@ select {
 
 .select::after {
   content: "▼";
+  color: #a1a1a1;
   padding: 0 8px;
   font-size: 12px;
   position: absolute;
-  right: 8px;
-  top: 4px;
+  right: -4px;
+  top: 50%;
+  margin-top: -7px;
   z-index: 1;
   text-align: center;
   width: 10%;
@@ -1292,6 +1294,7 @@ select {
   font-size: 2rem;
   font-weight: 300;
   color: #000;
+  margin-bottom: 20px;
 }
 
 .bid__form-caption_bold {font-weight: 500;}
@@ -1330,7 +1333,7 @@ select {
   /*width: 550px;*/
   width: 100%;
   height: 67px;
-  margin-top: 10px;
+  margin-top: 4px;
   padding-left: 30px;
   border: 1px solid #ccc;
   -webkit-border-radius: 3px;
