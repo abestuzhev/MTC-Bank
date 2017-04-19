@@ -4,7 +4,6 @@
 
 $(document).ready(function () {
 
-
     var $creditLimit,
         $cardRegion,
         $cardCity,
@@ -55,7 +54,7 @@ $(document).ready(function () {
                 $cardOffice.removeClass('is-show');
       		};
         });
-    
+
     //прописка > регион
     $('#form_text_2380').on('change', function(){
         $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
@@ -71,6 +70,14 @@ $(document).ready(function () {
 
     $('#form_text_2419').on('change', function(){
         $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
+
+    $('#ANKETA_SPOSOB-2398').on('click', function(){
+        $(this).closest(".bid__input-wrapper").next().addClass('is-show');;
+    });
+
+    $('#ANKETA_SPOSOB-2397').on('click', function(){
+        $(this).closest(".bid__input-wrapper").siblings('.js-ANKETA_SPOSOB-2398').removeClass('is-show');;
     });
     // end
 
