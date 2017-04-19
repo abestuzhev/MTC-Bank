@@ -602,17 +602,17 @@ select option {
   position: relative;
   /*background: url("../img/card-page/banner/banner_bg.png") no-repeat center;*/
 }
-
+/*
 .banner__slide img {
   width: 100%;
-}
+}*/
 
 .banner__container {
-  width: 1200px;
+  /*width: 1200px;
   position: absolute;
   top: 50%;
   left: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 
 }
 
@@ -2335,7 +2335,7 @@ img.ajaxloading {
   .owl-nav {
     display: none;
   }
-  .banner__title {
+  /*.banner__title {
     font-size: 32px;
   }
 
@@ -2343,7 +2343,7 @@ img.ajaxloading {
   .banner__text b,
   .banner__text {
     font-size: 22px;
-  }
+  }*/
 
   .access_img-notebook {
     width: 62%;
@@ -2368,7 +2368,7 @@ img.ajaxloading {
 }
 
 @media screen and (max-width: 1100px) {
-  .banner__title {
+  /*.banner__title {
     font-size: 24px;
     margin-bottom: 16px;
   }
@@ -2377,7 +2377,7 @@ img.ajaxloading {
   .banner__text {
     font-size: 16px;
     margin-bottom: 16px;
-  }
+  }*/
 
   .banner__container {
     top: 0;
@@ -2432,13 +2432,13 @@ img.ajaxloading {
     overflow: hidden;
   }
 
-  .banner__slide img {
+  /*.banner__slide img {
     position: absolute;
     width: auto !important;
     left: -59%;
     height: 100%;
     max-width: none;
-  }
+  }*/
 
   .textbox.houseCode {
     display: inline-block;
@@ -2457,17 +2457,17 @@ img.ajaxloading {
     font-size: 16px;
     margin-bottom: 16px;
   }
-
+/*
   .banner__slide img {
     left: -100%;
-  }
+  }*/
 
 }
 
 @media screen and (max-width: 480px){
-  .banner__slide img {
+  /*.banner__slide img {
     left: -185%;
-  }
+  }*/
 
   .banner__info {
     background-color: #fff;
@@ -2478,6 +2478,7 @@ img.ajaxloading {
   }
 
   .banner__container {
+    position: absolute;
     top: auto;
     bottom: 0;
     margin-bottom: 20px;
