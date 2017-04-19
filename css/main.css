@@ -596,14 +596,11 @@ select option {
 .banner__container {width: 945px;}
 
 .banner__slide {
-  /*height: 405px;*/
+  height: 405px;
   /*padding-top: 70px;*/
   padding-top: 10px;
   position: relative;
   /*background: url("../img/card-page/banner/banner_bg.png") no-repeat center;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
 }
 
 .banner__slide img {
@@ -620,7 +617,10 @@ select option {
 }
 
 @media only screen and (max-width: 768px) {
-  .banner__slide {height: 320px;}
+  .banner__slide {
+
+    background-position: 70% 50% !important;
+  }
 }
 
 .banner__info,
@@ -2430,7 +2430,6 @@ img.ajaxloading {
   .banner__slide {
     padding-bottom: 40px;
     overflow: hidden;
-    height: 320px;
   }
 
   .banner__slide img {
